@@ -10,7 +10,7 @@ source:
   sha256: 1c9e1071f61d6e7852d06195c2adb46ab2bb171dcc315e4abf86d1dfb0da2df7
 
 build:
-  number: 0
+  number: 1
   skip: true  # [not linux]
 
 requirements:
