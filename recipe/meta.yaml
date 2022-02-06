@@ -17,7 +17,7 @@ requirements:
   build:
     - {{ compiler("c") }}
     - pkg-config
-    - {{ compiler("rust" }}
+    - {{ compiler("rust") }}
   host:
     - openssl
     - python
