@@ -1,8 +1,5 @@
 #!/bin/bash
 
-# install the command-line interface
-cargo install --path pineappl_cli
-
 # install pineappl rust library with c-api support
 cargo install cargo-c
 cd pineappl_capi
