@@ -16,6 +16,7 @@ build:
 requirements:
   build:
     - python
+    - pip
     - {{ compiler("c") }}
     - {{ compiler("rust") }}
   host:
@@ -32,10 +33,6 @@ requirements:
 test:
   imports:
     - pineappl
-  requires:
-    - pytest
-  commands:
-    - pytest --pyargs pineappl
 
 about:
   home: https://github.com/N3PDF/pineappl
