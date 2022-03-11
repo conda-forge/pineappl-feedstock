@@ -8,6 +8,6 @@ cd ..
 
 # install the python bindings
 cd pineappl_py
-maturin build --release
+maturin build --release --interpreter $PYTHON
 cd target/wheels/
 PYTHONDONTWRITEBYTECODE=1 PIP_CONFIG_FILE=/dev/null pip install --isolated --ignore-installed --no-deps *.whl
