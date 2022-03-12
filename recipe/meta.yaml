@@ -1,5 +1,5 @@
 {% set name = "pineappl" %}
-{% set version = "0.4.1" %}
+{% set version = "0.5.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/N3PDF/pineappl/archive/v{{ version }}.tar.gz
-  sha256: 1c9e1071f61d6e7852d06195c2adb46ab2bb171dcc315e4abf86d1dfb0da2df7
+  sha256: 4bbd3df56e71c7ab7f0e0bd167ec77b52fe1ebdce004cf2a9aeca294f6e42bb0
 
 build:
   number: 0
@@ -22,6 +22,7 @@ requirements:
     - openssl
     - python
     - pip
+    - maturin
   run:
     - python
     - numpy
@@ -30,10 +31,6 @@ requirements:
 test:
   imports:
     - pineappl
-  requires:
-    - pytest
-  commands:
-    - pytest --pyargs pineappl
 
 about:
   home: https://github.com/N3PDF/pineappl
