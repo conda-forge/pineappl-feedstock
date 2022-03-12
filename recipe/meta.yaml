@@ -9,6 +9,7 @@ source:
   url: https://github.com/N3PDF/pineappl/archive/v{{ version }}.tar.gz
   sha256: 0fc73c71b8e5d61e9b0de7d95091fefc8130bf2e79871b3cefe9df6178fa158a
 
+
 build:
   number: 0
   skip: true  # [not linux]
