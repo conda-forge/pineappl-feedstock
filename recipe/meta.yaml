@@ -18,7 +18,6 @@ requirements:
     - {{ compiler("c") }}
     - {{ compiler("rust") }} >=1.45
   host:
-    - pkg-config
     - python
     - pip
     - maturin
