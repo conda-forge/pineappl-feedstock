@@ -19,7 +19,6 @@ requirements:
     - {{ compiler("rust") }} >=1.45
   host:
     - pkg-config
-    - openssl
     - python
     - pip
     - maturin
