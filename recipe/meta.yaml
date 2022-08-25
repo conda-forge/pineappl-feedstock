@@ -1,5 +1,5 @@
 {% set name = "pineappl" %}
-{% set version = "0.5.4" %}
+{% set version = "0.5.5" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/N3PDF/pineappl/archive/v{{ version }}.tar.gz
-  sha256: e4832ddbed4b6dba1df8d35c66af085afa7b21ae1c3b7411eaaa747baf614abc
+  sha256: a813015f38f50fd849e1f30454de3b7da6371d34412e75e1a94b539d644cd0b4
 
 build:
   number: 0
