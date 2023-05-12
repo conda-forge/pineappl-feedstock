@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # install pineappl rust library with c-api support
-cargo install cargo-c --version v0.9.14+cargo-0.66
+cargo install cargo-c --version 0.9.14+cargo-0.66
 cd pineappl_capi
 cargo cinstall --release --prefix=$PREFIX
 cd ..
