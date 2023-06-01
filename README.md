@@ -1,11 +1,11 @@
-About pineappl
-==============
+About pineappl-feedstock
+========================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/pineappl-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/N3PDF/pineappl
 
 Package license: GPL-3.0-only
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/pineappl-feedstock/blob/main/LICENSE.txt)
 
 Summary: PineAPPL is not an extension of APPLgrid.
 
