@@ -17,10 +17,12 @@ build:
 requirements:
   build:
     - {{ compiler('c') }}
+    - maturin
     - {{ compiler('rust') }} >=1.70
     - python                                 # [build_platform != target_platform]
     - cross-python_{{ target_platform }}     # [build_platform != target_platform]
   host:
+    - {{ compiler('c') }}
     - pkg-config
     - python
     - pip

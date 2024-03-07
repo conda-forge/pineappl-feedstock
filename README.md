@@ -261,6 +261,5 @@ Feedstock Maintainers
 =====================
 
 * [@cschwan](https://github.com/cschwan/)
-* [@scarlehoff](https://github.com/scarlehoff/)
 * [@scarrazza](https://github.com/scarrazza/)
 
