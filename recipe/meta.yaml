@@ -37,7 +37,7 @@ test:
     - pineappl
 
 about:
-  home: https://github.com/N3PDF/pineappl
+  home: https://github.com/NNPDF/pineappl
   license: GPL-3.0-only
   license_family: GPL
   license_file: LICENSE
