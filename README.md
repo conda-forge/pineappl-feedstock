@@ -3,7 +3,7 @@ About pineappl-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/pineappl-feedstock/blob/main/LICENSE.txt)
 
-Home: https://github.com/N3PDF/pineappl
+Home: https://github.com/NNPDF/pineappl
 
 Package license: GPL-3.0-only
 
@@ -261,5 +261,6 @@ Feedstock Maintainers
 =====================
 
 * [@cschwan](https://github.com/cschwan/)
+* [@scarlehoff](https://github.com/scarlehoff/)
 * [@scarrazza](https://github.com/scarrazza/)
 
