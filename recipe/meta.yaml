@@ -10,7 +10,7 @@ source:
   sha256: 6534855a76d6d91b734218e66b6d1f2e558cf25865498b03172a713d173e90e7
 
 build:
-  number: 1
+  number: 2
   skip: true  # [win]
   skip: true  # [python_impl == "pypy"]
 
@@ -37,7 +37,7 @@ test:
     - pineappl
 
 about:
-  home: https://github.com/N3PDF/pineappl
+  home: https://github.com/NNPDF/pineappl
   license: GPL-3.0-only
   license_family: GPL
   license_file: LICENSE
