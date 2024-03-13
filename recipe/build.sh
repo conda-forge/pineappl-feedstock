@@ -1,11 +1,7 @@
 #!/bin/bash
 
-
-if [[ $HOST == *arm64-apple* ]]; then
-    curl --proto '=https' --tlsv1.2 -sSf https://nnpdf.github.io/pineappl/install-capi.sh | sh -s -- --prefix ${PREFIX} --target aarch64-apple-darwin
-else
-    curl --proto '=https' --tlsv1.2 -sSf https://nnpdf.github.io/pineappl/install-capi.sh | sh -s -- --prefix ${PREFIX}
-fi
+# install the CAPI
+curl --proto '=https' --tlsv1.2 -sSf https://nnpdf.github.io/pineappl/install-capi.sh | sh -s -- --prefix ${PREFIX}
 
 # install the python bindings
 cd pineappl_py
