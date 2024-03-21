@@ -17,7 +17,7 @@ build:
 requirements:
   build:
     - {{ compiler('c') }}
-    - {{ compiler('c++') }}
+    - {{ compiler('cxx') }}
     - maturin
     - {{ compiler('rust') }} >=1.70
     - python                                 # [build_platform != target_platform]
