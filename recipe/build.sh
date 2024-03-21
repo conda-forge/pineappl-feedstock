@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# install CLI
+cargo install --features=evolve,fktable --path pineappl_cli
+
 # install the CAPI
 curl --proto '=https' --tlsv1.2 -sSf https://nnpdf.github.io/pineappl/install-capi.sh | sh -s -- --prefix ${PREFIX}
 
