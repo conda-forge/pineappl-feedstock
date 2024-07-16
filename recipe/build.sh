@@ -3,6 +3,7 @@
 # install the CAPI
 cd pineappl_capi
 cargo cinstall --release --prefix=$PREFIX
+cd ..
 
 # install the python bindings
 cd pineappl_py
