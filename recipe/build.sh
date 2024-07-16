@@ -1,7 +1,8 @@
 #!/bin/bash
 
 # install the CAPI
-curl --proto '=https' --tlsv1.2 -sSf https://nnpdf.github.io/pineappl/install-capi.sh | sh -s -- --prefix ${PREFIX}
+cd pineappl_capi
+cargo cinstall --release --prefix=$PREFIX
 
 # install the python bindings
 cd pineappl_py
