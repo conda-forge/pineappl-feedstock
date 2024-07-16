@@ -1,5 +1,7 @@
 #!/bin/bash
 
+echo $HOST
+
 # install the CAPI
 cd pineappl_capi
 cargo cinstall --release --prefix=$PREFIX
