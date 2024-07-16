@@ -1,7 +1,7 @@
 #!/bin/bash
 
 echo "UNAME: $(uname -m):$(uname -s)"
-case " HOST: $HOST"
+echo " HOST: $HOST"
 
 # install the CAPI
 cd pineappl_capi
