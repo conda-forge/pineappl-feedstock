@@ -3,8 +3,11 @@
 # install CLI
 cargo install --features=evolve,fktable --path pineappl_cli
 
+cargo install cargo-c --version 0.9.14+cargo-0.66
+cd pineappl_capi
 # install the CAPI
-curl --proto '=https' --tlsv1.2 -sSf https://nnpdf.github.io/pineappl/install-capi.sh | sh -s -- --prefix ${PREFIX}
+cargo cinstall --release --prefix=$PREFIX
+cd ..
 
 # install the python bindings
 cd pineappl_py
