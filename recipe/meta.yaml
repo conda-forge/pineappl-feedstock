@@ -6,44 +6,37 @@ package:
   version: {{ version }}
 
 source:
-  url: https://github.com/NNPDF/pineappl/archive/v{{ version }}.tar.gz
-  sha256: a3ffda93de167028e6f7c5e27923d456c176c95159a9245374008c5167e8b7e5
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/pineappl-{{ version }}.tar.gz
+  sha256: 0f682ce32228b4d63089b45ff667efb0322e927c0522db5a83408d468b185973
 
 build:
+  noarch: python
+  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   number: 0
-  skip: true  # [win]
-  skip: true  # [python_impl == "pypy"]
 
 requirements:
-  build:
-    - {{ compiler('c') }}
-    - maturin
-    - {{ compiler('rust') }} >=1.70
-    - cargo-c
-    - python                                 # [build_platform != target_platform]
-    - cross-python_{{ target_platform }}     # [build_platform != target_platform]
   host:
-    - {{ compiler('c') }}
-    - {{ stdlib("c") }}
-    - pkg-config
-    - python
+    - python >=3.6
+    - maturin >=0.13.4
     - pip
-    - maturin
   run:
-    - pkg-config
-    - python
-    - numpy
+    - python >=3.6
+    - numpy >=1.16.0,<2.0.0
 
 test:
   imports:
     - pineappl
+  commands:
+    - pip check
+  requires:
+    - pip
 
 about:
   home: https://github.com/NNPDF/pineappl
   license: GPL-3.0-only
   license_family: GPL
   license_file: LICENSE
-  summary: PineAPPL is not an extension of APPLgrid.
+  summary: Python bindings to PineAPPL
 
 extra:
   recipe-maintainers:
