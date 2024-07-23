@@ -7,4 +7,4 @@ curl --proto '=https' --tlsv1.2 -sSf https://nnpdf.github.io/pineappl/install-ca
 cd pineappl_py
 maturin build --release --interpreter $PYTHON
 cd ../target/wheels/
-PYTHONDONTWRITEBYTECODE=1 PIP_CONFIG_FILE=/dev/null pip install --isolated --ignore-installed --no-deps *.whl
+PYTHONDONTWRITEBYTECODE=1 PIP_CONFIG_FILE=/dev/null $PYTHON -m pip install --isolated --ignore-installed --no-deps *.whl
