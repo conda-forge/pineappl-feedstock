@@ -1,5 +1,5 @@
 {% set name = "pineappl" %}
-{% set version = "0.7.3" %}
+{% set version = "0.8.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,28 +7,29 @@ package:
 
 source:
   url: https://github.com/NNPDF/pineappl/archive/v{{ version }}.tar.gz
-  sha256: 6534855a76d6d91b734218e66b6d1f2e558cf25865498b03172a713d173e90e7
+  sha256: 24d8c9a0186f32791cb24c2e55d4fa00a7b6e5cb924b729eafd46f518d7d546d
 
 build:
-  number: 4
+  number: 0
   skip: true  # [win]
   skip: true  # [python_impl == "pypy"]
 
 requirements:
   build:
     - {{ compiler('c') }}
+    - {{ stdlib("c") }}
     - maturin
     - {{ compiler('rust') }} >=1.70
     - python                                 # [build_platform != target_platform]
     - cross-python_{{ target_platform }}     # [build_platform != target_platform]
   host:
     - {{ compiler('c') }}
+    - {{ stdlib("c") }}
     - pkg-config
     - python
     - pip
     - maturin
   run:
-    - __osx >={{ MACOSX_DEPLOYMENT_TARGET|default("10.12") }}  # [osx and x86_64]
     - pkg-config
     - python
     - numpy
