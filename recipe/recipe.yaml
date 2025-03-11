@@ -16,10 +16,12 @@ build:
   number: 1
   skip:
     - pypy
+    - win
 
 requirements:
   build:
     - ${{ compiler('c') }}
+    - ${{ stdlib('c') }}
     - maturin
     - ${{ compiler('rust') }} >=1.70
     - if: build_platform != target_platform
