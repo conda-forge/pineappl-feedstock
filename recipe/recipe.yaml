@@ -1,0 +1,58 @@
+schema_version: 1
+
+context:
+  name: pineappl
+  version: 0.8.7
+
+package:
+  name: ${{ name|lower }}
+  version: ${{ version }}
+
+source:
+  url: https://github.com/NNPDF/pineappl/archive/v${{ version }}.tar.gz
+  sha256: 894e2ec0a30c41c87fa583222a49e9f37b101365a11d2502cc305113e8a082b0
+
+build:
+  number: 1
+  skip:
+    - pypy
+    - win
+
+requirements:
+  build:
+    - ${{ compiler('c') }}
+    - ${{ stdlib('c') }}
+    - maturin
+    - ${{ compiler('rust') }} >=1.70
+    - if: build_platform != target_platform
+      then:
+        - python
+        - cross-python_${{ target_platform }}
+  host:
+    - ${{ compiler('c') }}
+    - pkg-config
+    - python
+    - pip
+    - maturin
+  run:
+    - pkg-config
+    - python
+    - numpy
+
+tests:
+  - python:
+      imports:
+        - pineappl
+
+about:
+  license: GPL-3.0-only
+  license_file: LICENSE
+  summary: PineAPPL is not an extension of APPLgrid.
+  homepage: https://github.com/NNPDF/pineappl
+
+extra:
+  recipe-maintainers:
+    - Radonirinaunimi
+    - scarlehoff
+    - scarrazza
+    - cschwan
