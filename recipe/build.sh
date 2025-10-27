@@ -2,6 +2,10 @@
 
 owd=${PWD}
 
+if [[ "$PY_VER" == "3.14" ]]; then
+  export PYO3_USE_ABI3_FORWARD_COMPATIBILITY=1
+fi
+
 # install the CAPI
 curl --proto '=https' --tlsv1.2 -sSf https://nnpdf.github.io/pineappl/install-capi.sh | sh -s -- --prefix ${PREFIX} --version ${PKG_VERSION}
 
