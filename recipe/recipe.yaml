@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: pineappl
-  version: "1.3.3"
+  version: "1.4.1"
 
 package:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://github.com/NNPDF/pineappl/archive/v${{ version }}.tar.gz
-  sha256: 9248b837206c6dbd25134de2cea0c62b524ddde5bd042bff163ec397443f2f81
+  sha256: 51c8f7c266350a5b714a570b3ff20a07c007d555155226ffcca5a69ad63a8d89
 
 build:
   number: 0
